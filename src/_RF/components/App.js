@@ -1,18 +1,15 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./home/HomePage";
-import AboutPage from "./about/AboutPage";
-import Header from "./common/Header";
-import PageNotFound from "./PageNotFound";
-import CoursesPage from "./courses/CoursesPage";
-// eslint-disable-next-line import/no-named-as-default
-import ManageCoursePage from "./courses/ManageCoursePage";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import HomePage from "./Home/HomePage";
+import AboutPage from "./About/AboutPage";
+import Header from "./Common/Header";
+import PageNotFound from "./PageNotFound/PageNotFound";
+import CoursesPage from "./Courses/CoursesPage";
+import ManageCoursePage from "./Courses/ManageCoursePage";
 
 function App() {
   return (
-    <div className="container-fluid">
+    <div className="container-fiuld">
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -22,7 +19,6 @@ function App() {
         <Route path="/course" component={ManageCoursePage} />
         <Route component={PageNotFound} />
       </Switch>
-      <ToastContainer autoClose={3000} hideProgressBar />
     </div>
   );
 }
